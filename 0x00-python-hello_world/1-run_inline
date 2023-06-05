@@ -1,0 +1,5 @@
+#!/bin/bash
+touch tmp.py
+echo $PYCODE > tmp.py
+python3 tmp.py
+rm tmp.py

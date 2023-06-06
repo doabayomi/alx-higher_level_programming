@@ -8,3 +8,4 @@ This is the Python Hello World program for the ALX SE program.
 ```console
 $ python3 -m compileall -b <pythonic-project-name>
 ```
+* The order at which you call the operations matter on how the bytecode will be outputed.

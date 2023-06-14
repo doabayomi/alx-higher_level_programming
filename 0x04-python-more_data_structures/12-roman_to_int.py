@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
 
                 value = reference.get(numeral)
                 next_value = reference.get(next_numeral)
-                if next_value == None:
+                if next_value is None:
                     integer = integer + value
                 elif next_value > value:
                     integer = integer - value

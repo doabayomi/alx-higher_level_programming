@@ -1,7 +1,12 @@
 #!/usr/bin/python3
-raise_exception = __import__('5-raise_exception').raise_exception
+safe_print_division = __import__('3-safe_print_division').safe_print_division
 
-try:
-    raise_exception()
-except TypeError as te:
-    print("Exception raised")
+a = 12
+b = 2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
+
+a = 12
+b = 0
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))

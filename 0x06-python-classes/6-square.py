@@ -32,7 +32,7 @@ class Square:
             raise TypeError(tuple_msg)
         else:
             for i in position:
-                if not isinstance(i, int):
+                if (not isinstance(i, int)) or (not i >= 0):
                     raise TypeError(tuple_msg)
             self.__position = position
 
@@ -81,7 +81,7 @@ class Square:
             raise TypeError(msg)
         else:
             for i in value:
-                if not isinstance(i, int):
+                if (not isinstance(i, int)) or (not i >= 0):
                     raise TypeError(msg)
             self.__position = value
 

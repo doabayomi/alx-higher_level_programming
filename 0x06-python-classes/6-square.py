@@ -3,6 +3,7 @@
 
 This implementation has the size attribute made private
 to protect its type with type restriction and error raising
+and the addition of the position attribute
 """
 
 
@@ -17,6 +18,7 @@ class Square:
 
         Args:
             size (int): The size of the square
+            position (tuple): The position of the square
         """
         tuple_msg = "position must be a tuple of 2 positive integers"
         if isinstance(size, int):

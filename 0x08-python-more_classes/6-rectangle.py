@@ -102,13 +102,15 @@ class Rectangle:
     def __str__(self):
         """Prints the rectangle's representation
         """
+        string = ''
         if self.__width == 0 or self.__height == 0:
-            print("", end="")
+            return string
         else:
             for i in range(self.__height):
                 for j in range(self.__width):
-                    print("#", end="")
-                print()
+                    string += '#'
+                string += '\n'
+            return string
 
     def __repr__(self):
         """Returns a string representation of the Rectangle

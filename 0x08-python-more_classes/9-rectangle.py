@@ -1,14 +1,5 @@
 #!/usr/bin/python3
 """Rectangle class definition
-
-A rectangle defined by the width and height made with the getters and setters.
-It has a value keeping track of the number of instances of the class.
-There is also an area, perimeter function handled in it. There is a handling
-function for the print() and str() call case. There is also a handling for the
-repr function.
-
-The deletion instance is being handled. There is a comparison function and a
-method to make a square
 """
 
 
@@ -16,10 +7,10 @@ class Rectangle:
     """A rectangle class instance
 
     Attributes:
-        width (int): The width of the rectangle
-        height (int): The height of the rectangle
-        number_of_instances (int): The number of current instances
-        print_symbol: The print symbol for the __str__ method
+        width (int): Width of the rectangle
+        height (int): Height of the rectangle
+        number_of_instances (int): The number of instances existing
+        print_symbol: The character/element used to draw the rectangle
     """
     number_of_instances = 0
     print_symbol = '#'
@@ -31,8 +22,8 @@ class Rectangle:
             width (int): The width of the rectangle
             height (int): The height of the rectangle
         """
-        self.__width = width
-        self.__height = height
+        self.width = width
+        self.height = height
         Rectangle.number_of_instances += 1
 
     @property
@@ -56,8 +47,7 @@ class Rectangle:
         else:
             if value < 0:
                 raise ValueError("width must be >= 0")
-            else:
-                self.__width = value
+            self.__width = value
 
     @property
     def height(self):
@@ -66,9 +56,9 @@ class Rectangle:
         Returns:
             int: The height of the rectangle instance
         """
-        return self._height
+        return self.__height
 
-    @width.setter
+    @height.setter
     def height(self, value):
         """Sets the height attribute
 
@@ -80,8 +70,7 @@ class Rectangle:
         else:
             if value < 0:
                 raise ValueError("height must be >= 0")
-            else:
-                self.__height = value
+            self.__height = value
 
     def area(self):
         """Calculate the area of the rectangle
@@ -89,7 +78,7 @@ class Rectangle:
         Returns:
             int: The area of the rectangle
         """
-        return (self.__width * self.__height)
+        return (self.width * self.height)
 
     def perimeter(self):
         """Finds the perimeter of the rectangle
@@ -97,22 +86,22 @@ class Rectangle:
         Returns:
             int: The perimeter of the rectangle
         """
-        if (self.__width == 0) or (self.__height == 0):
-            return 0
-        else:
-            return 2 * (self.__width + self.__height)
+        if self.width == 0 or self.height == 0:
+            return (0)
+        return 2 * (self.width + self.height)
 
     def __str__(self):
         """Prints the rectangle's representation
         """
         string = ''
-        if self.__width == 0 or self.__height == 0:
+        if self.width == 0 or self.height == 0:
             return string
         else:
-            for i in range(self.__height):
-                for j in range(self.__width):
+            for i in range(self.height):
+                for j in range(self.width):
                     string += str(self.print_symbol)
-                string += '\n'
+                if not (i == (self.height - 1)):
+                    string += '\n'
             return string
 
     def __repr__(self):
@@ -121,7 +110,7 @@ class Rectangle:
         Returns:
             str: The string representation of the Rectangle
         """
-        return "Rectangle({0}, {1})".format(self.__width, self.__height)
+        return "Rectangle({0}, {1})".format(self.width, self.height)
 
     def __del__(self):
         """Deletes the Rectangle class instance
@@ -129,6 +118,7 @@ class Rectangle:
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
         """Compares two rectangles based on area
 
@@ -160,7 +150,5 @@ class Rectangle:
         Returns:
             Rectangle: The square instance
         """
-        sqr = cls()
-        sqr.width = size
-        sqr.height = size
+        sqr = cls(size, size)
         return sqr

@@ -11,3 +11,5 @@ In the `Rectangle` class, using setter methods (`self.width = width` and `self.h
 2. **Data Integrity:** By going through the setter methods, the attributes (`self.width` and `self.height`) maintain their data integrity according to the defined validation rules. This prevents inconsistent or unexpected attribute values and helps maintain the expected behavior of the `Rectangle` class.
 
 3. **Code Consistency:** Using the setter methods consistently throughout the class promotes code consistency. It ensures that any assignments to the attributes follow the same validation rules, regardless of where they occur in the code. This simplifies the maintenance and understanding of the class in the long run.
+
+**Note**: This should be used in other functions too apart from `__init__`

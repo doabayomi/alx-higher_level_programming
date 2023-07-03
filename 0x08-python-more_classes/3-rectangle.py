@@ -94,5 +94,6 @@ class Rectangle:
             for i in range(self.height):
                 for j in range(self.width):
                     string = string + '#'
-                string += '\n'
+                if not (i == (self.height - 1)):
+                    string += '\n'
             return string

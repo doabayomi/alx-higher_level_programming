@@ -21,12 +21,16 @@ def matrix_divided(matrix, div):
     divided_matrix = []
     not_int_msg = "matrix must be a matrix (list of lists) of integers/floats"
     size_msg = "Each row of the matrix must have the same size"
+    if not isinstance(matrix, list):
+        raise TypeError(not_int_msg)
+    if not matrix:
+        raise TypeError(not_int_msg)
     for row in matrix:
         divided_row = []
         for i in row:
-            divided_row.append(round(i / div, 2))
             if (not isinstance(i, int)) and (not isinstance(i, float)):
                 raise TypeError(not_int_msg)
+            divided_row.append(round(i / div, 2))
         for others in matrix:
             if (len(row) != len(others)):
                 raise TypeError(size_msg)

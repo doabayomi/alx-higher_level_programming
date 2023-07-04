@@ -1,0 +1,43 @@
+==============================
+Module: 5-text_indentation.py
+==============================
+
+This module breaks text in different lines using the ".", "," and "?" symbol
+
+Usage:
+------
+We first call the ``text_indentation`` from the ``5-text_indentation`` module
+
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+>>> text_indentation("Hello.")
+Hello.
+<BLANKLINE>
+
+>>> text_indentation("             Hello: World! How are you? I'm fine.")
+Hello:
+<BLANKLINE>
+World! How are you?
+<BLANKLINE>
+I'm fine.
+<BLANKLINE>
+
+>>> text_indentation("")
+(empty output)
+
+>>> text_indentation(123)
+Traceback (most recent call last):
+    ...
+TypeError: text must be a string
+
+>>> text_indentation("Hello.             How are you?")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>
+
+>>> text_indentation("Hello.  How are you?")
+Hello.
+<BLANKLINE>
+How are you?
+<BLANKLINE>

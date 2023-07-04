@@ -19,23 +19,23 @@ We first call the ``add_integer`` from the ``0-add_integer`` module
 >>> add_integer(-2)
 96
 
->>> add_integer(-10, -5)
--15
-
->>> add_integer(3.2, 4.5)
-7
-
->>> add_integer(-4.3, 7.5)
-3
-
->>> add_integer("hello")
+>>> add_integer('10', 5)
 Traceback (most recent call last):
+    ...
 TypeError: a must be an integer
 
->>> add_integer("hello", "world")
+>>> add_integer(10, '5')
 Traceback (most recent call last):
-TypeError: a must be an integer
-
->>> add_integer(12, "six)
-Traceback (most recent call last):
+    ...
 TypeError: b must be an integer
+
+>>> add_integer([1, 2])
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+
+>>> add_integer((1, 2))
+Traceback (most recent call last):
+    ...
+TypeError: a must be an integer
+

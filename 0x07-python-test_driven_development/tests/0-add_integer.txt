@@ -1,0 +1,41 @@
+==============================
+Module: 0-add_integer.py
+==============================
+
+This module finds the sum of two integers and can take both float and integer as inputs.
+
+Usage:
+------
+We first call the ``add_integer`` from the ``0-add_integer`` module
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+>>> add_integer(2)
+100
+
+>>> add_integer(10, 10)
+20
+
+>>> add_integer(-2)
+96
+
+>>> add_integer(-10, -5)
+-15
+
+>>> add_integer(3.2, 4.5)
+7
+
+>>> add_integer(-4.3, 7.5)
+3
+
+>>> add_integer("hello")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer("hello", "world")
+Traceback (most recent call last):
+TypeError: a must be an integer
+
+>>> add_integer(12, "six)
+Traceback (most recent call last):
+TypeError: b must be an integer

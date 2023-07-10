@@ -33,3 +33,9 @@ We first call the ``MyList`` from the ``1-my_list`` module
 >>> my_list = MyList([-4, -1, -4, 2, 6, 2, 4, 6, 4])
 >>> my_list.print_sorted()
 [-4, -4, -1, 2, 2, 4, 4, 6, 6]
+
+>>> ml = MyList([3, 1, '2'])
+>>> ml.print_sorted()
+Traceback (most recent call last):
+    ...
+TypeError: '<' not supported between instances of 'str' and 'int'

@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module to print members and methods of an object
+"""
+
 
 def lookup(obj):
     """Prints the members and methods of an object

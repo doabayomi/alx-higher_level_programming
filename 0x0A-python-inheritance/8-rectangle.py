@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""A Rectangle Class inheriting the BaseGeometry Class with
+intialization with width and height property.
+"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 

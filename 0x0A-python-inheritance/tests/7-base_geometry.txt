@@ -12,7 +12,11 @@ We first call the ``BaseGeometry`` from the ``7-base_geometry`` module
 
 >>> geometry = BaseGeometry()
 >>> geometry.integer_validator("width", 10)
+10
+
 >>> geometry.integer_validator("height", 5)
+5
+
 >>> geometry.integer_validator("length", 0)
 Traceback (most recent call last):
     ...

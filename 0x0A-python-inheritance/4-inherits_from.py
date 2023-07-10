@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Module to find if an object is only an inherited instance of a specified
+class
+"""
+
 
 def inherits_from(obj, a_class):
     """Finds if the object is an instance of a class that inherited

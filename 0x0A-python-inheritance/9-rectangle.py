@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-
+"""A Rectangle Class implementation with the initialization,
+area method overwriting the BaseGeometry implementation and
+a method to handle the print call for the object
+"""
 BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
 

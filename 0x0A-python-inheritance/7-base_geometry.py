@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""Base Geometry class with both the area method and an integer
+validation method
+"""
+
 
 class BaseGeometry:
     """Base Geometry class implementation

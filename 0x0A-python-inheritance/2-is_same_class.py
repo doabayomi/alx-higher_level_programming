@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""Module to find if an object is an exact instance of a specified class
+"""
+
 
 def is_same_class(obj, a_class):
     """Finds if the object is exactly an instance of the specified class

@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""A Square implementation inheriting Rectangle with initialization
+and area method
+"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 

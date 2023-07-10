@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-
+"""A Square implementation with the addition of a
+string method to handle print and str
+"""
 Rectangle = __import__('9-rectangle').Rectangle
 
 

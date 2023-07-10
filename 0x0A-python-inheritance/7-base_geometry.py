@@ -22,7 +22,7 @@ class BaseGeometry:
         Returns:
             int: value of the property if it works
         """
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         else:
             if value <= 0:

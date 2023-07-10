@@ -1,0 +1,43 @@
+==============================
+Module: 7-base_geometry
+==============================
+
+This module has the definition for a BaseGeometry Class
+
+Usage:
+------
+We first call the ``BaseGeometry`` from the ``7-base_geometry`` module
+
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+>>> geometry = BaseGeometry()
+>>> geometry.integer_validator("width", 10)
+>>> geometry.integer_validator("height", 5)
+>>> geometry.integer_validator("length", 0)
+Traceback (most recent call last):
+    ...
+ValueError: length must be greater than 0
+
+>>> geometry.integer_validator("side", -5)
+Traceback (most recent call last):
+    ...
+ValueError: side must be greater than 0
+
+>>> geometry.integer_validator("radius", 3.5)
+Traceback (most recent call last):
+    ...
+TypeError: radius must be an integer
+
+>>> geometry.integer_validator("name", "John")
+Traceback (most recent call last):
+    ...
+TypeError: name must be an integer
+
+
+Doctest for area function call
+------------------------------------------
+>>> geometry = BaseGeometry()
+>>> geometry.area()
+Traceback (most recent call last):
+    ...
+Exception: area() is not implemented

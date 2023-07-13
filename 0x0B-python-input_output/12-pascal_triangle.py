@@ -30,7 +30,7 @@ def combination(n, r):
     n_factorial = factorial(n)
     r_factorial = factorial(r)
     nCr = n_factorial / (factorial(n - r) * r_factorial)
-    return nCr
+    return int(nCr)
 
 
 def pascal_triangle(n):

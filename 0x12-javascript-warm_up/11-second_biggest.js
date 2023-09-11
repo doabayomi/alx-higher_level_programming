@@ -1,13 +1,13 @@
 #!/usr/bin/node
 const process = require('process');
 const args = process.argv;
-let validArgs = [];
+const validArgs = [];
 let count = 0;
 args.forEach((val, index) => {
   if (index > 1) {
     validArgs.push(Number(val));
   }
-  count++
+  count++;
 });
 
 if (count === 2 || count === 3) {
